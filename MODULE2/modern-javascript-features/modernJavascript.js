@@ -223,6 +223,6 @@ console.log("stop here")
 //  As JS is used certain features are requested by developers that are decided upon as essential and added to ECMAscript
 
 
-// WELCOME TO ES6 YA'LL!!!!!
+
 
 
