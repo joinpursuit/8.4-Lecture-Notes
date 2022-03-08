@@ -20,13 +20,13 @@ By the end of this lesson you should be able to:
  Guiding Questions
 
 - What is a higher order function?
-  // A function that accepts or returns another function
+  // A function that accepts or returns another function - will pass calbacks to all higher order array methods
 
 - What is a native array method?
-// a built in method that can be used 
+// a built in method that can be used.  This comes out of the box in JS and allows us to do powerful things to our arrays. 
 
 - What does it mean for a function to produce side effects?
-// A function that modifies something outside its paramters
+// A function that modifies something outside its paramters - for example
 
 - What does it mean for a function to return a value?
 // allows us to save the value 
@@ -35,12 +35,16 @@ By the end of this lesson you should be able to:
 // yes but it should be avooided
 
 - The `.forEach()` method expects at least one argument. What data type is this argument?
-// A callback - this i
+// A callback function.  This function tells forEach what to do for each item in the array
 
-- What is a callback function?
+- What is a callback function?  
+//  A function that is passed as a parameter.  One way to think of a callback is 
+// a set of instructions that we want our native array methods to execute
 
 - The `.forEach()` method's callback function has up to three parameters. What are these parameters?
-
+  The element (from the original array) that we want to execute the callback on
+  The index current index of the array 
+  The array on which forEach() was called
 
 */
   
@@ -56,15 +60,11 @@ By the end of this lesson you should be able to:
 // MAP stands for Make Array Plz 
   const printAllComics = (comics) => {
     // Write your code here.
-    let result = comics.map(( comic, index, originalArray) => {
-      return`(${index + 1} out of ${originalArray.length}) ${comic.title} by  ${comic.author}`;
+    // we can also destructure comic in our callback to shorten this
+    let result = comics.forEach(( comic, index, originalArray) => {
+      console.log(`(${index + 1} out of ${originalArray.length}) ${comic.title} by  ${comic.author}`);
     })
-    // console.log(result);
     return result
-    //OLD WAY
-    // for (let comic of comics) {
-    //   console.log(`${comic.title} by ${comic.author}`);
-    // }
 
    }
 let allComics = printAllComics(comics);
@@ -88,10 +88,13 @@ allComics = null;
   
 
 - Replace the `.forEach()` in your code with `.map()`. Does the code still run?
-
+   // the code runs but map needs to be returned!  
+   // additionally we need to return each item in our callback to populate the array that .map() returns
 - What are some of the differences between `.forEach()` and `.map()`?
+   map returns a new array - forEach returns undefined and is primarly for side effects
 
 - Instead of logging, `return` inside of your callback function. How can you access the result of your `.map()` function call?
+we can save this return value - a new array - in a variablwe
 
 - Write a new function called `getAuthors()`. The function should take in an array of comics (like above) and return an array of just the authors' names.
 
@@ -100,13 +103,13 @@ allComics = null;
 */
 
 function getAuthors(comics) {
-  return comics.map((whatever) => {
-    return whatever.title
+  return comics.map((comic) => {
+    return comic.title
   })
  // Write your code here!
 }
 const result = getAuthors(comics);
-// console.log(result);
+
 
   //> [ "Bill Watterson", "Gavin Aung Than", "Olivia James", "Joshua Barkman"]
  
@@ -119,11 +122,11 @@ const result = getAuthors(comics);
 */
 
   function getTitle(comic) {
-   return comic.title.toUpperCase();
+   return comic.title.toUpperCase(); // <---- we can add any JS operation here we like!
   }
 
-  const result2 = comics.map((comic) => getTitle(comic));// < -----
-  // console.log(result2.forEach(comic => console.log(comic)));
+  const result2 = comics.map((comic) => getTitle(comic));// < ----- notice here we can pass our already declared getTitle() to our callback in .map()
+
 // ****** GROUP ACTIVITY! 20 minute challenge! *******
 
 // Comic sales are down!  
@@ -142,14 +145,12 @@ let reviews = [
 
 const makeFakeReviews = (comics, reviews) => {
   return comics.map( (comic) => {
-
+    // This function returns a new string of a comic and a random review from the outer scope of makeFakeReviews
      return `${comic.title} ${reviews[Math.floor(Math.random() * reviews.length)]}`;
-    // make this happen - use map to return a new array of strings
-
-  });
+    });
 };
 let fakes = makeFakeReviews(comics, reviews);
-// console.log(fakes)
+
 
 
 // How does the `.filter()` method differ from `.map()`? From `.forEach()`?
@@ -157,14 +158,13 @@ let fakes = makeFakeReviews(comics, reviews);
 
 // Mentally evaluate the code below before running it. What do you think will be logged out? Why?
 
- 
-  function isPrintComic(comic) {
-    return comic.kind === "print" ;
-  }
+function isPrintComic(comic) {
+  return comic.kind === "print" ;
+}
+// notice here we have => function and no {} on one line.  Thus, we need no return statement
+const filtered = comics.filter(comic => isPrintComic(comic));
 
-  const filtered = comics.filter(comic => isPrintComic(comic));
-
-  console.log(filtered);
+console.log(filtered);
   
  
 
@@ -174,8 +174,9 @@ let fakes = makeFakeReviews(comics, reviews);
   // function isPrintComic(comic) {
   //   return comic.kind;
   // }
- 
+ // Since every `comic` has a `kind` this would simply return a TRUTHY value to filter - thus every item would be passed into the array to be returned from filter()
 //`type` _is not_ a key on each comic object. Keeping that in mind, would happen if the callback function had the code below instead? Why?
+// Every invocation of comic.type would return `undefined` - which evaluates to falsy according to the rules of .filter().  Thuse NOTHING would be passed to the return array.  We would retrn AN EMPTY ARRAY
 
  
   // function isPrintComic(comic) {
