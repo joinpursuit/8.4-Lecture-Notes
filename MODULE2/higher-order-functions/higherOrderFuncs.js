@@ -96,4 +96,22 @@
         return newWord
     };
 
-console.log(transform("up Down left", myAcroynmCallback));
+// console.log(transform("up Down left", myAcroynmCallback));
+
+function myFunc (){
+
+    myArr = [1, 2, 3]
+    myArr.forEach((el) => console.log(this));
+    myArr.forEach(function (el) {
+        console.log(this)
+    });
+}
+
+let thisFunc = () => {
+
+    console.log(this);
+}
+
+myFunc();
+// thisFunc();
+
