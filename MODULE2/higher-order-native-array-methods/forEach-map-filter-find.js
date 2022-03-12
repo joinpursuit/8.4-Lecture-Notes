@@ -198,6 +198,25 @@ console.log(filtered);
   // rolls represents an array of numbers rolled
   let rolls = [];
  // As a group - write a function rolls 500 dice and records the results in rolls;
+ const roll500 = () => {
+  let i = 0;
+  while (i < 500) {
+    rolls.push(rollDie());
+    i++;
+  }
+ }
+
+ roll500();
+ let wins = rolls.filter(roll => roll  > 4);
+ let noWins = rolls.map((roll) => {
+    return roll < 4 ? roll : 4 
+ })
+
+
+ 
+
+
+
 
  // A five or a six is considered a winning roll
  // using .filter() how can we determine how many winning rolls there are?
@@ -208,10 +227,12 @@ console.log(filtered);
 // How does the `.find()` method differ from `.filter()`? From `.map()` or `.forEach()`?
 
 //What will be the difference between `filterResult` and `findResult` after the code is run below?
-
+() => {
+  console.log(hello)
+}
  
   function getJoshuaBarkmanComic(comic) {
-    return comic.author 
+    return comic.author === "Joshua Barkman"
   }
 
   const filterResult = comics.filter(comic => getJoshuaBarkmanComic(comic));
@@ -219,14 +240,15 @@ console.log(filtered);
  // Will Calvin & Hobbes or Nancy be returned by the following code? Why?
 
  
-  function isWebComic(comic) {
-    return comic.kind
+  function isWebComic(hotdog) {
+    return hotdog.kind === "web"
   }
 
-  const result3 = comics.find(comic => isPrintComic(comic));
+const result3 = comics.find((comic) => isWebComic(comic));
+const result4 = comics.find(isWebComic);
 
-
-  const result4 = comics.find(isPrintComic);
+console.log(result3)
+console.log(result4)
 
  
 
