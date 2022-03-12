@@ -175,13 +175,18 @@ console.log(filtered);
   //   return comic.kind;
   // }
  // Since every `comic` has a `kind` this would simply return a TRUTHY value to filter - thus every item would be passed into the array to be returned from filter()
-//`type` _is not_ a key on each comic object. Keeping that in mind, would happen if the callback function had the code below instead? Why?
-// Every invocation of comic.type would return `undefined` - which evaluates to falsy according to the rules of .filter().  Thuse NOTHING would be passed to the return array.  We would retrn AN EMPTY ARRAY
 
- 
+ //`type` _is not_ a key on each comic object. Keeping that in mind, would happen if the callback function had the code below instead? Why?
+
   // function isPrintComic(comic) {
   //   return comic.type;
   // }
+
+
+// Every invocation of comic.type would return `undefined` - which evaluates to falsy according to the rules of .filter().  Thuse NOTHING would be passed to the return array.  We would retrn AN EMPTY ARRAY
+
+ 
+ 
 
 
  // ****** GROUP ACTIVITY! *******
@@ -193,7 +198,11 @@ console.log(filtered);
   // rolls represents an array of numbers rolled
   let rolls = [];
  // As a group - write a function rolls 500 dice and records the results in rolls;
- // using .filter() how can we determine how many  5's and 6's were rolled?
+
+ // A five or a six is considered a winning roll
+ // using .filter() how can we determine how many winning rolls there are?
+
+ // using a .map() how can we return an array that has NO winning rolls?
 
 
 // How does the `.find()` method differ from `.filter()`? From `.map()` or `.forEach()`?
@@ -206,15 +215,8 @@ console.log(filtered);
   }
 
   const filterResult = comics.filter(comic => getJoshuaBarkmanComic(comic));
-  
-  
   const findResult = comics.find(comic => getJoshuaBarkmanComic(comic));
- 
- 
-
-// Is it possible to modify the `getJoshuaBarkmanComic()` function so that it could instead find any author? If so, how so? If not, why not?
-
-// Will Calvin & Hobbes or Nancy be returned by the following code? Why?
+ // Will Calvin & Hobbes or Nancy be returned by the following code? Why?
 
  
   function isWebComic(comic) {
@@ -223,17 +225,6 @@ console.log(filtered);
 
   const result3 = comics.find(comic => isPrintComic(comic));
 
-
-
-
-
-
-//  What will get returned from the following code? Why?
-
- 
-  // function isPrintComic(comic) {
-  //   return comic
-  // }
 
   const result4 = comics.find(isPrintComic);
 
