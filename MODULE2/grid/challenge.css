@@ -8,7 +8,10 @@ body {
 }
 .container {
     margin:20px;
-    height:700px;
+}
+.child {
+    background:linear-gradient(45deg, #01012b, rgb(0,184,255));
+    border: 1px solid#ff2a6d
 }
 footer{
    
@@ -36,8 +39,4 @@ article{
 }
 .seven {
   
-}
-.child {
-    background:linear-gradient(45deg, #01012b, rgb(0,184,255));
-    border: 1px solid#ff2a6d
 }
