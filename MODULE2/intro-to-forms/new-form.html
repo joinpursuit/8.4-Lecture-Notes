@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Form</title>
+</head>
+
+<body>
+    <h1>My Form</h1>
+    <form >
+        <select>
+            <option>-- Choose an Honorific --</option>
+            <option value="mr">Mr.</option>
+            <option value="mrs">Mrs.</option>
+            <option value="ms">Ms.</option>
+            <option value="mx">Mx.</option>
+            <option value="none">None</option>
+        </select>
+        <label>
+            <input name="honorific" type="radio" />
+            Mr.
+        </label>
+        <label>
+            <input name="honorific" type="radio" />
+            Mrs.
+        </label>
+        <label>
+            <input name="honorific" type="radio" />
+            Mx.
+        </label>
+        <input type="text" id="name-person-1" name="fullname" placeholder="Enter your name..." required/>
+        <br />
+        <label>
+            Preferred Name
+            <input id="preferred" name="first" type="text" required/>
+        </label>
+        <br />
+        <label>
+            Surname
+            <input id="surname" name="last" type="text" />
+        </label>
+
+        <label>
+            Is Gigi awesome?
+            <input type="checkbox" checked>Yes</input>
+            <input type="checkbox">Obviously</input>
+        </label>
+
+        <input type="submit">
+
+
+    </form>
+
+</body>
+
+</html>

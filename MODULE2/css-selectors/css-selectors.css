@@ -1,0 +1,45 @@
+#jaws {
+  color: blue;
+}
+
+h3 {
+    color:pink;
+    font-size: 40px;
+    background-color: black;
+}
+
+.important-quote {
+  border-bottom: 3px solid red;
+}
+
+h2.movie-title {
+  font-size: 70px;
+}
+
+h2 > .movie-title {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+p.movie-quote {
+    font-size: 25px;
+    box-shadow: 8px 15px;
+}
+
+.active {
+    border: 3px yellow;
+}
+
+.quotes span {
+    color: red;
+}
+
+.quotes p:last-of-type {
+    color: pink;
+}
+
+a:visited{
+    color: lime;
+}
+

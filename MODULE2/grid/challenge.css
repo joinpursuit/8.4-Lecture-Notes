@@ -1,0 +1,42 @@
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    /* line-height: 1.5; */
+    color:#d1f7ff;
+    text-shadow:#05d9e8 11px 0px 14px;
+
+}
+.container {
+    margin:20px;
+}
+.child {
+    background:linear-gradient(45deg, #01012b, rgb(0,184,255));
+    border: 1px solid#ff2a6d
+}
+footer{
+   
+}
+header {
+    
+}
+nav {
+    
+}
+main {
+   
+}
+aside {
+    
+}
+article{
+    
+}
+.five{
+  
+}
+.six {
+
+}
+.seven {
+  
+}
