@@ -4,39 +4,55 @@ body {
     /* line-height: 1.5; */
     color:#d1f7ff;
     text-shadow:#05d9e8 11px 0px 14px;
-
-}
+ }
 .container {
     margin:20px;
+    display:grid;
+
+    grid-template-areas: 
+
+    "a a a a a a"
+    "b b b b b b"
+    "c d d d d e"
+    "h h h h h h";
+
+    padding:20px;
+    height:90vh;
+    gap:15px
 }
 .child {
     background:linear-gradient(45deg, #01012b, rgb(0,184,255));
-    border: 1px solid#ff2a6d
+    border: 1px solid#ff2a6d;
+    display:flex;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
 }
-footer{
-   
-}
+
 header {
-    
+   grid-area:a
 }
 nav {
-    
+    grid-area:b;
+    grid-row:2/4
 }
 main {
-   
+   grid-area:d;
+   grid-row:4/9
 }
 aside {
-    
+    grid-area:d;
 }
-article{
-    
+.four{
+    grid-area:c;
+    grid-row:4/9
 }
 .five{
+    grid-area:e;
+    grid-row:4/9;
   
 }
-.six {
-
-}
-.seven {
-  
+footer {
+   grid-area:h;
+   grid-row: 9
 }
