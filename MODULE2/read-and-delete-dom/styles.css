@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+html {
+  color: #13070C;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+body {
+  background: #00AFB9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+main {
+  align-self: center;
+  background: #F87666;
+  border: 9px double #FDFFFC;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 100px;
+  width: 50%;
+}
+
+h1 {
+  background: #FDFFFC;
+  font-family: 'Staatliches', cursive;
+  margin: 0 0 10px;
+  padding: 10px;
+}
+
+span.emoji {
+  margin: 0 15px;
+}
+
+p {
+  background: #FDFFFC;
+  margin: 0;
+  padding: 10px;
+}
+
+span.label {
+  font-weight: bold;
+}
