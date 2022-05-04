@@ -1,0 +1,16 @@
+html {
+  background-color: darkslategray;
+}
+
+main {
+  padding: 20px 15%;
+}
+
+h1 {
+  color: cadetblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: lightgray;
+}
