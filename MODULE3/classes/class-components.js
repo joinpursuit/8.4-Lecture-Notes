@@ -4,6 +4,8 @@ const Example = () => {
     return <h1> Hello World! </h1>;
 }
 
+
+
 // CLASS COMPONENT
 
 import React from 'react';

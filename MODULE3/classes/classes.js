@@ -1,6 +1,7 @@
 class Animal {
-    constructor(name){
+    constructor(name, age){
         this.name = name
+        this.age = age
         // inside our constructor lets give our Animal class
         // instance a name using the `this` keyword
     }
@@ -22,8 +23,8 @@ class Animal {
 // create an instance of animal using the new keyword
 let leo = new Animal("Leo");
 console.log(leo.name)
-let rex = new Animal("Rex")
-console.log(rex.name)
+// let rex = new Animal("Rex")
+// console.log(rex.name)
 
 // call the Animal class' .speak method on the instance of animal
 console.log(leo.speak("roar"))
@@ -38,8 +39,8 @@ console.log(leo.speak("roar"))
 
 
 class Dog extends Animal {
-    constructor(name, breed) {
-        super(name)
+    constructor(name, breed, age) {
+        super(name, age)
         // calls the super function to pass the arguments
         // required by the parent class
         this.breed = breed;
@@ -53,8 +54,16 @@ class Dog extends Animal {
 }
 
 // create an instance of dog
+let rex = new Dog("Rex", "poodle", 42)
 
 // call the Animal class' .speak method on the instance of dog
+
+console.log(rex.speak("grrr"))
+
 // note: we didn't have to define this in the dog class
 
 // call the Dog class' .bark method on our instance of dog
+
+console.log(rex.bark())
+console.log(rex.age)
+console.log(rex.breed)
