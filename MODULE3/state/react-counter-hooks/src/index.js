@@ -6,6 +6,7 @@ import "./styles.css";
 
 const Counter = () => {
   const [count, setCount] = useState(0)
+
   debugger
 
   const incrementCount = () => {
@@ -24,7 +25,7 @@ const Counter = () => {
       </p>
       {/* REFACTOR */}
       <button onClick={incrementCount}>click here + 1</button>
-      <button onClick={decrememntCount}>click here - 1</button>
+      <button onClick={decrementCount}>click here - 1</button>
     </div>
   );
 }
