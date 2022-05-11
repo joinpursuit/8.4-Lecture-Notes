@@ -21,9 +21,6 @@ const Counter = () => {
     <div>
       <p>
         <strong>Current Count: </strong> {count}<br/>
-        <strong>Current Count1: </strong> {count1}<br />
-        <strong>Current Count2: </strong> {count2}<br />
-        <strong>Current Numbers: </strong> {numbers}
       </p>
       {/* REFACTOR */}
       <button onClick={incrementCount}>click here + 1</button>
