@@ -4,22 +4,15 @@ export default class ClassForm extends Component {
    constructor(){
        super()
        this.state = {
-       
-        }
-        // this.handleCheckChange = this.handleCheckChange.bind(this)
-   }
+       }
+    }
    
    
   render() {
-      
-    return (
+      return (
         <>
-       
-        
         <form className="form-container">
-           
-        <h2>User Information</h2>
-        
+           <h2>User Information</h2>
         <label for ="not-robot">Are you a robot?</label>
           {/* Checkbox input  */}
           <input id="not-robot" 

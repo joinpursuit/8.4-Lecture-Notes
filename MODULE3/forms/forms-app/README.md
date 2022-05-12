@@ -15,7 +15,7 @@
 
 ## Note App
   
-   - We have two components - App and Form;
+   - We have two components - App and Form / ClassForm;
    - Setting state in Form  - what do we need?
    - Controlling our Inputs with state;
    - Attaching event listeners to form fields;
