@@ -5,8 +5,7 @@ const Form = () => {
     const [select, setSelect] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-
-
+    
     const handleCheck = (event) => {
         // this has to be a boolean value 
         setIsRobot(event.target.checked)
@@ -40,7 +39,7 @@ const Form = () => {
            <h2>User Information</h2>
            <h3> { isRobot ? "you are a robot" : "could be a robot.."} </h3>
            <h3> { select } { firstName } { lastName }!!!! </h3>
-           
+
         <form onSubmit={handleSubmit} className="form-container">
         <label for ="not-robot">Are you a robot?</label>
           {/* Checkbox input  */}
@@ -49,7 +48,6 @@ const Form = () => {
             type="checkbox"
             onChange={ handleCheck }
           />
-        
           {/* Select Input */}
           <select 
           onChange={ handleSelect }

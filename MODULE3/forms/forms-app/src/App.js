@@ -9,7 +9,7 @@ function App() {
     <div className="App">
        <h1>Welcome to Forms country.</h1>
        <Form />
-       {/* <ClassForm /> */}
+       <ClassForm />
     </div>
   );
 }
