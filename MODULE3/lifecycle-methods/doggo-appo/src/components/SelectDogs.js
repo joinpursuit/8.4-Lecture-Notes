@@ -2,12 +2,19 @@
 import React, { Component } from 'react'
 
 export default class SelectDogs extends Component {
-  
-    
+    constructor(props) {
+      super(props)
+    }
+
 
   render() {
     return (
-      <div>eventually select will controll how many dogs we need to display</div>
+      <div>
+        <input 
+          type="text" 
+          value={ this.props.dogNumber }
+          onChange={ this.props.handleDogChange }/>
+      </div>
     )
   }
 }

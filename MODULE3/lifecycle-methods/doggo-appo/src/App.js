@@ -5,16 +5,28 @@ import SelectDogs from './components/SelectDogs';
 import Dogs from "./components/Dogs"
 
 export default class App extends Component {
- 
-
-
- 
-  render() {
+  constructor() {
+    super()
+    this.state = {
+      dogNumber : 1
+    }
+  }
+  handleDogChange = (event) => {
+    const { value } = event.target;
+    this.setState({
+      dogNumber: value
+    })
+  }
+  
+ render() {
     return (
    <div>
-     dog app with https://dog.ceo/api/breeds/image/random
-     <Dogs />
-     <SelectDogs />
+     our dog number is { this.state.dogNumber }
+     <SelectDogs 
+      handleDogChange = { this.handleDogChange } 
+      dogNumber = { this.state.dogNumber }
+     />
+     <Dogs dogNumber = { this.state.dogNumber } />
      </div>
 
     )
