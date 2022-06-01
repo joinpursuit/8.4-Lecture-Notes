@@ -1,23 +1,18 @@
 /* eslint-disable no-useless-constructor */
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class SelectDogs extends Component {
+const SelectDogs = ({handleDogChange, dogNumber}) => {
     // convert to functional componenent
-    constructor(props) {
-      super(props)
-    }
-
-
-  render() {
     // get rid of render and change the way we access our properties and methods in our return
 
     return (
       <div>
         <input 
           type="text" 
-          value={ this.props.dogNumber }
-          onChange={ this.props.handleDogChange }/>
+          value={ dogNumber }
+          onChange={ handleDogChange }/>
       </div>
     )
-  }
 }
+
+export default SelectDogs;
