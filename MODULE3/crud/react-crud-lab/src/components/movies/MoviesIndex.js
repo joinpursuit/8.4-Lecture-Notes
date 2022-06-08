@@ -1,7 +1,9 @@
+import { render } from "@testing-library/react";
 import React from "react";
 
 // Helper functions
 import { getAllMovies } from "../../api/fetch";
+import ErrorMessage from "../home/common/ErrorMessage";
 
 class MoviesIndex extends React.Component {
   constructor(props) {
@@ -19,10 +21,14 @@ class MoviesIndex extends React.Component {
         console.error(error);
         this.setState({ loadingError: true });
       });
-  }
-
-  render() {
-    return <p>Movie List</p>;
+  } 
+  
+  render() { 
+    return (
+    <>
+      { this.state.loadingError ? <ErrorMessage/> : <p>movies</p> }
+    </>
+    )
   }
 }
 

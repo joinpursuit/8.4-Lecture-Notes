@@ -2,11 +2,13 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 // Components
-import Nav from "./components/common/Nav";
+
 import Home from "./components/home/Home";
 import ShowsIndex from "./components/shows/ShowsIndex";
 import MoviesIndex from "./components/movies/MoviesIndex";
-import Footer from "./components/common/Footer";
+import Footer from "./components/home/common/Footer";
+import Nav from "./components/home/common/Nav"
+import ErrorMessage from "./components/home/common/ErrorMessage";
 
 const App = () => (
   <div className="wrapper">
@@ -20,6 +22,9 @@ const App = () => (
       </Route>
       <Route path="/movies">
         <MoviesIndex />
+      </Route>
+      <Route path="*">
+      <ErrorMessage />
       </Route>
     </Switch>
     <Footer />
