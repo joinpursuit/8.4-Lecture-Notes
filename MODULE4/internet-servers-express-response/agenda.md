@@ -17,7 +17,7 @@
 4. Dan-ell Morales, Victor Lopez
 5. Jamal Ruiz, Tom LaTulipe
 6. Jede Brahma, Thierry Ankoue
-7. Jimmy Ayivor, Teraesa Metivier
+7. Jimmy Ayivor
 8. John Prado, Taji Fuller
 9. Jorge Carrera, Spencer Simon
 10. Kalilah Clarke, Soma Majumder
