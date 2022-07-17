@@ -63,3 +63,39 @@
     - Now that we have created a create route for our bookmarks we can test it out using some curl commands
         - Get all bookmarks: `curl http://localhost:3003/bookmarks`
         - Sample bookmark post: `curl -H "Content-Type: application/json" -X POST -d '{"name":"AV Club", "url": "https://www.avclub.com"}' localhost:3003/bookmarks`
+        - View updated bookmarks: `curl http://localhost:3003/bookmarks`
+        - Did that work? Why or why not?
+
+    - We need to add some middleware that willl parse our JSON into some data we can use
+        - In app.js above our routes:
+        ```js
+        app.use(express.json());
+        ```
+        -Now let's try our curl commands again
+
+# Middleware
+- Think of middleware as a layer of code that "runs in the middle" of a request and response. 
+- In express we have a third parameter to our callback function called next that allows us to to tell our application when to move to the next callback function
+    - Let's see this by adding the following code to our app.js file:
+        ```js
+        app.use((req, res, next) => {
+            console.log("This code runs for every request");
+            next();
+        });
+        ```
+- We can also can add middleware to certain routes only
+    - Add to bookmarksController.js:
+        ```js
+        const validateURL = (req, res, next) => {
+            console.log("This function checks the validity of the URL entered by the user");
+        };
+        ```
+    - Add this function to our CREATE
+        ```js
+        bookmarks.post("/", validateURL, (req, res) => {
+            bookmarksArray.push(req.body);
+            res.json(bookmarksArray[bookmarksArray.length - 1]);
+        });
+        ```
+    - Let's try the curl command to see what happens without the next function
+    - Now lets be sure to call the next function in our `validateURL` function. We should now be able to complete our post request.
