@@ -21,10 +21,13 @@ bookmarks.get("/:arrayIndex", (req, res) => {
     } 
 })
 
+
 bookmarks.post("/", validateURL, (req, res) => {
     bookmarksData.push(req.body);
     res.json(bookmarksData[bookmarksData.length - 1]);
 });
+
+
 
 
 module.exports = bookmarks
