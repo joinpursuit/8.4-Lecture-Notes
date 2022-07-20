@@ -5,8 +5,22 @@ function BookmarkDetails() {
   const [bookmark] = useState([]);
   let { index } = useParams();
 
-  useEffect(() => {}, []);
-  const handleDelete = () => {};
+  useEffect(() => {}, 
+  /* 
+    We need to GET the bookmark from our DB to display to our user
+    1. Get the INDEX it exists at in the db
+    2. GET the data
+    3. Display it to our user in state;
+  */
+ []);
+  const handleDelete = () => {
+    /* 
+      We need to send a DELETE request to our DB 
+      1. Get the INDEX of our bookmark
+      2. send the DELETE request to our API
+      3. < what do we need to do after this works ? >
+    */
+  };
   return (
     <article>
       <h3>

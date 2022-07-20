@@ -8,7 +8,11 @@ function BookmarkNewForm() {
     isFavorite: false,
     description: "",
   });
-
+  /* We need a function to SEND our DATA to the DATABASE
+    1. Get a handle on our data
+    2. send a POST request to our DB
+    3. < What happens after we succeed? >
+  */
   const handleTextChange = (event) => {
     setBookmark({ ...bookmark, [event.target.id]: event.target.value });
   };
