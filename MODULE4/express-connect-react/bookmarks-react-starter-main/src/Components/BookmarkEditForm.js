@@ -19,8 +19,16 @@ function BookmarkEditForm() {
   const handleCheckboxChange = () => {
     setBookmark({ ...bookmark, isFavorite: !bookmark.isFavorite });
   };
+  // we need a function to SEND our UPDATED bookmark to the DB
+  useEffect(() => {
+    /* 
+      1. Get a handle on the data from our user
+      2. Send a request to the DB
+      3. < What do if it succeeds ? >
+    */
+  }, []);
 
-  useEffect(() => {}, []);
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
