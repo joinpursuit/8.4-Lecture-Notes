@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Bookmark from "./Bookmark";
-
+import axios from "axios";
+// ^^ this is our new package for making API calls
+const API = process.env.REACT_APP_API_URL;
+// request for data must come AFTER component is loaded to the DOM
+// otherwise we have a RACE condition  - page might be done before data arrives;
 function Bookmarks() {
-  const [bookmarks] = useState([]);
+  const [bookmarks, setBookmarks] = useState([]);
+  
+  useEffect(() => {
+    axios.get(`${API}/bookmarks`)
+      .then((response) => { setBookmarks(response.data) })
+      .catch((error) => { console.error(error) })
+  },[])
+
   return (
     <div className="Bookmarks">
       <section>
