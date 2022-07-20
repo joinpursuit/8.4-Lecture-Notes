@@ -1,5 +1,9 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+//midleware to enable CORS on our server 
+// CORS is our doorman for our API
+app.use(cors())
 //middleware that turns our JSON into usable JAVASCRIPT
 app.use(express.json());
 // we can make our middleware ourselves
