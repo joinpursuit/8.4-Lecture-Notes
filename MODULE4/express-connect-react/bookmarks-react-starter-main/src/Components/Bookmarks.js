@@ -13,6 +13,9 @@ function Bookmarks() {
       .then((response) => { setBookmarks(response.data) })
       .catch((error) => { console.error(error) })
   },[])
+  // when the dependency array of a useEffect is empty the code inside will only run once: after the component mounts!
+  // adding a value to our dependency array will cause our useEffect to run anytime that value changes
+  
 
   return (
     <div className="Bookmarks">

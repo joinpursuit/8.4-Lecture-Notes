@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+
+const API = process.env.REACT_APP_API_URL;
 
 function BookmarkEditForm() {
   let { index } = useParams();
+  const navigate = useNavigate();
 
   const [bookmark, setBookmark] = useState({
     name: "",
@@ -21,6 +25,9 @@ function BookmarkEditForm() {
   };
   // we need a function to SEND our UPDATED bookmark to the DB
   useEffect(() => {
+    axios.get(`${API}/bookmarks/${index}`)
+      .then(response => setBookmark(response.data))
+      .catch(error => console.error(error))
     /* 
       1. Get a handle on the data from our user
       2. Send a request to the DB
@@ -28,10 +35,21 @@ function BookmarkEditForm() {
     */
   }, []);
 
-
+  const updateBookmark = () => {
+    axios.put(`${API}/bookmarks/${index}`, bookmark) 
+    // two arguments because the second argument(bookmark) is the data we have to send. In the backend it is our request.body
+      .then(response => {
+        setBookmark(response.data)
+        // updating the bookmark in state to the updated bookmark from our backend
+        navigate(`/bookmarks/${index}`)
+        // navigatng back to our bookmark show page
+      })
+      .catch(error => console.error(error))
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    updateBookmark();
   };
   return (
     <div className="Edit">
