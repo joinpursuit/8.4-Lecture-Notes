@@ -1,0 +1,16 @@
+# Entity Relationship Diagram
+- What heck is an entity?
+    - An entity is a data model. You are already familiar with data models from the apps we've previously built together (think bookmarks and logs). BONUS - Another common term for an entity is a resource.
+- So entities and data models are the same thing right?
+    - Not exactly...
+    - Entity generally refers to the big picture of the data required from a conceptual level.
+    - A data model includes the specifics required for the database. This will give exact column names, data types and other details for developers to build out the actual code.
+    - But for the most part we'll use these terms interchangably
+- Cool! So why do they need relationship diagrams?
+    - As our applications get bigger, or in other terms - scale, there will be tens, possibly hundreds of data models and their relationships can be very complex
+    - Think if you had to design an application with this much data. It would be an overwhelming task.
+    - Entity Relationship Diagrams allow us to to better design and debug the data in our applications.
+- And what exactly is a Entity Relationship Diagram?
+    - Entity Relationship Diagrams visually describe how different tables are related in your application
+    - Each entity is typically represented as a visual table with a header and two columns. The header has the name of the table and each row is made up of a key-value pair where the key is the field name and the value is the data type.
+    - Let's check it out!
