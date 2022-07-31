@@ -28,6 +28,12 @@
 - Creating a Database
 
 - Data types
+    - int 
+    - decimal
+    - bool
+    - varcahr(n)
+    - text
+    - timestamp
 
 - Creating a Data Table
 
