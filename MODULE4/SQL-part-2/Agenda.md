@@ -8,16 +8,26 @@
     - What is a Database?
     - How do we Create one?
     - How do we Delete one?
+      - DROP DATABASE <nameofdatabase>
     - How do we add Data to a DB?
+      - INSERT INTO <db> (col1, col2, etc.....) VALUES (val1, val2, etc....);
     - How do we READ Data from a DB?
+      - SELECT * FROM <table>;
     - How do we UPDATE data from a DB?
+      - UPDATE <table> SET col val WHERE <condition>; 
     - How do we DELETE data from a DB?
+      - DELETE FROM <table> WHERE <condition>
 ## JOINS 
 - Joins discussion
     - What is a JOIN?
+      - Joining two tables together
     - Why do we need to know this?
+      - Increases efficiency and allows for data cleanliness and easier consumption
+      - This is called data normalization
     - What is a PRIMARY KEY?
+      - Unique resource entity. Everytime we create a resource it will have a unique way to identify it.
     - What is a FOREIGN KEY?
+      - Represents information located on another table that the given resource has a relationship with
     - ACTIVITY!
 
 ## SQL Walkthrough
