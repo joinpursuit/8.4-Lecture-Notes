@@ -6,7 +6,7 @@ CREATE DATABASE bookmarks_dev;
 CREATE TABLE bookmarks (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
-    url TEXT,
+    url TEXT NOT NULL,
     category TEXT,
     is_favorite BOOLEAN
 );
