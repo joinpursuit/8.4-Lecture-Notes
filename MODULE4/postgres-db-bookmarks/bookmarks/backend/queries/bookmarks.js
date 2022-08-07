@@ -22,6 +22,9 @@ const getBookmark = async (id) => {
     const oneBookmark = await db.one("SELECT * FROM bookmarks WHERE id=$1", id);
     return oneBookmark;
   } catch (error) {
+    // with using db.one() we will not hit our catch block even if we have no
+    // record with the corresponding ID - there are MANY ways to handle this
+    // db.oneOrNone() is one way - there are also others.
     return error;
   }
 };
@@ -39,5 +42,36 @@ const createBookmark = async (bookmark) => {
   }
 };
 
+const deleteBookmark = async (id) => {
+  try {
+    const deletedBookmark = await db.one("DELETE FROM bookmarks WHERE id = $1 RETURNING *", id);
+    return deletedBookmark;
+  } catch (err) {
+    return err;
+  }
+};
+// We need to pass in the BOOKMARK - the information to change
+// && the ID of the bookmark to access it in the DB
+const updateBookmark = async (bookmark, id) => {
+  const { name, url, category, is_favorite } = bookmark;
+  try {
+    // first argument is the QUERY string
+    // second argument is the actual DATA 
+    const updatedBookmark = await db.one("UPDATE bookmarks SET name = $1, url = $2, category = $3, is_favorite = $4 WHERE id = $5 RETURNING *",
+    // remember the order MATTERS here 
+    // $1  $2   $3        $4           $5
+    [name, url, category, is_favorite, id]);
+    return updatedBookmark;
+  } catch (err) {
+    return err;
+  }
+}
+
 // we will have a bunch of exports, hence the object;
-module.exports = { getAllBookmarks, getBookmark, createBookmark };
+module.exports = { 
+  getAllBookmarks, 
+  getBookmark, 
+  createBookmark, 
+  deleteBookmark,
+  updateBookmark
+};

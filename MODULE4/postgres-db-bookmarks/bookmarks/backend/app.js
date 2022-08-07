@@ -4,7 +4,7 @@ const app = express();
 
 const bookmarksController = require("./controllers/bookmarksController.js")
 // MIDDLEWARE - What happens between the REQ but BEFORE it hits a route. After the REQ but before the ROUTE
-// REMEMBER THESE MUST COME BEFORE OUR CONTROLLER OR WE WILL HAVE A BAD TIME
+// REMEMBER THESE MUST COME BEFORE OUR CONTROLLERS OR WE WILL HAVE A BAD TIME
 app.use(express.json());
 app.use(cors());
 
