@@ -27,5 +27,5 @@ Pairs for the rest of the week
 10. Samantha Figueroa & AC Kleemoff
 11. Zane Ahmed & Ziqian Pan
 12. Soma Majumder & Victor Lopez
-13. Spencer Simon & Jede Brahmin
+13. Spencer Simon & Jede Brahma
 14. Taji Fuller & Thierry Ankoue
