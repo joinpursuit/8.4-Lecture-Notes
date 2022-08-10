@@ -1,5 +1,6 @@
 const express = require("express");
 const bookmarks = express.Router();
+const reviewsController = require("./reviewsController.js");
 const {
   getAllBookmarks,
   getBookmark,
@@ -10,6 +11,8 @@ const {
 const { checkName, checkBoolean, validateUrl } = require("../validations/checkBookmarks")
 // Extends our app so that we can create a new route for our BOOKMARKS resource
 // we need to make this ASYNC as well
+bookmarks.use("/:bookmarkId/reviews", reviewsController);
+
 bookmarks.get("/", async (req, res) => {
   const allBookmarks = await getAllBookmarks();
   if (allBookmarks[0]) {
