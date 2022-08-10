@@ -1,14 +1,15 @@
 const express = require('express');
 const cors = require("cors");
 const app = express();
-
-const bookmarksController = require("./controllers/bookmarksController.js")
+// CONTROLLERS
+const bookmarksController = require("./controllers/bookmarksController.js");
 // MIDDLEWARE - What happens between the REQ but BEFORE it hits a route. After the REQ but before the ROUTE
 // REMEMBER THESE MUST COME BEFORE OUR CONTROLLERS OR WE WILL HAVE A BAD TIME
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 app.use("/bookmarks", bookmarksController);
+
 
 // Bouncer at the club - Allows requests from other origins (like our REACT APP)
 // PARSES JSON FOR US SO WE CAN USE IT - thanks Christine
