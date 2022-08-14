@@ -39,7 +39,9 @@ function ReviewForm( props ) {
   };
   return (
     <div className="Edit">
-  
+      {/* this is our placeholder for our sandwiched text from parent */}
+      { props.children }
+
       <form onSubmit={handleSubmit}>
         <label htmlFor="reviewer">Name:</label>
         <input
