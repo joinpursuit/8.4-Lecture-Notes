@@ -29,3 +29,8 @@ Pairs for the rest of the week
 12. Soma Majumder & Victor Lopez
 13. Spencer Simon & Jede Brahma
 14. Taji Fuller & Thierry Ankoue
+
+
+
+
+
