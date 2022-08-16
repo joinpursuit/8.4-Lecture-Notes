@@ -83,7 +83,7 @@ As a type of user, I want to do some goal, so that something happens for some re
 
 
 ## Snack a Log Planning Lab(s)
-Tonight we will be working with our Snack-a-log partner to finish the [Trello](https://github.com/joinpursuit/Pursuit-Core-Web/blob/master/full-stack-express/app-planning-/activity/README.md) and [Wireframes](https://github.com/joinpursuit/Pursuit-Core-Web/blob/master/full-stack-express/app-planning-trello/activity/README.md) labs.  
+Tonight we will be working with our Snack-a-log partner to finish the [Trello](https://github.com/joinpursuit/Pursuit-Core-Web/blob/master/full-stack-express/app-planning-wireframes/activity/README.md) and [Wireframes](https://github.com/joinpursuit/Pursuit-Core-Web/blob/master/full-stack-express/app-planning-trello/activity/README.md) labs.  
 
 The Snack-a-log project can be found [here](https://github.com/joinpursuit/snack-a-log)
 
