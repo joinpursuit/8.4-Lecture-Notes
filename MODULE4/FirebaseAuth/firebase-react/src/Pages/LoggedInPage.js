@@ -10,9 +10,11 @@ export const LoggedInPage = () => {
       height:'30vh'
   }
   const navigate = useNavigate();
+  // invoke the useContext hook with our UserContext to access its global state
   const user = useContext(UserContext);
   
   useEffect(() => { 
+    // reroute our user if we do not have a USER value in our context
     if(!user) {
         alert("not logged in - redirecting")
         naviagate("/");
