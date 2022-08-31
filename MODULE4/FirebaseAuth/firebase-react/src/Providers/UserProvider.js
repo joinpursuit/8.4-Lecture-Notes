@@ -25,14 +25,14 @@ export const UserProvider = (props) => {
         setUser(null);
       }
     })
-   // check for user save in state
   }, []);
   return (
     // UserContext.Provider is created automatically when useContext is invoked
     // we pass the stateful user value to our context and any of its children can
-    // choose to access this value
+    // choose to access this value by invoking the useContext() hook
    <UserContext.Provider value={user}>
     <div>
+    // props.children allows us to flexibly pass compononets to our provider
       { props.children }
     </div>
    </UserContext.Provider>
