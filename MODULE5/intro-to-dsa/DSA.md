@@ -6,11 +6,11 @@
     - What data structures are we already familiar with?
     - During this module we will be introducing you to new data stuctures
 
-- Why do we care about algorithms and data structures?
+# Why do we care about algorithms and data structures?
     - Thought excercise
     - Coding interviews are the most common interview types for engineers
 
-- What types of interviews might we encounter in the wild?
+# What types of interviews might we encounter in the wild?
 
 # Polya's approach to problem solving
     - You cannot memorize 
