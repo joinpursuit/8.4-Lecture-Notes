@@ -16,6 +16,7 @@
 
     Our teams are here:
 
+    
     This Team: ['Thierry', 'Sabrina', 'Soma', 'Christine', 'Jede', 'Tom', 'Victor', 'Samantha', 'Kenyetta', 'Ziqian', 'Zane', 'Dan', 'Metza']
 
     That Team: ['Luke', 'Adnan', 'Jorge', 'Jamal', 'Mason', 'Olayinka', 'T.K', 'Jimmy', 'John', 'Spencer', 'Kalilah', 'Khaleed']
