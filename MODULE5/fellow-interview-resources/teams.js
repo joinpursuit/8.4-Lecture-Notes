@@ -18,10 +18,10 @@
 
     
     This Team: ['Thierry', 'Sabrina', 'Soma', 'Christine', 'Jede', 'Tom', 'Victor', 'Samantha', 'Kenyetta', 'Ziqian', 'Zane', 'Dan', 'Metza']
-
+    https://github.com/joinpursuit/peer-mi-group-a
     That Team: ['Luke', 'Adnan', 'Jorge', 'Jamal', 'Mason', 'Olayinka', 'T.K', 'Jimmy', 'John', 'Spencer', 'Kalilah', 'Khaleed']
-
-
+    https://github.com/joinpursuit/peer-mi-group-b
+    
 
     BELOW is how we shuffled the groups.  
     See if you can follow the logic!
@@ -99,3 +99,4 @@ let { thisTeam, thatTeam } = shuffle(fellows);
 // this fucntion will get our daily pairs every time it is invoked
 let pairs = getPairs(thisTeam, thatTeam);
 
+console.log(pairs)
