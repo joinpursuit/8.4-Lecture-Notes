@@ -86,7 +86,7 @@
             this.name = name
             this.type = type;
             this._age = 4;
-            this.color = color;
+            this.color = color ? color : "brown";
             this.isFriendly = isFriendly;
             this.walkStyle = walkStyle || "walka, walka"
         }
@@ -104,6 +104,11 @@
         }
         classyGreeting(otherclassyAnimal){
             console.log(`Cheerio, ${otherclassyAnimal.name}! I heard you are a ${otherclassyAnimal._age} year old ${otherclassyAnimal.type}`)
+        }
+        static definition = "a living organism that feeds on organic matter, typically having specialized sense organs and nervous system and able to respond rapidly to stimuli."
+
+        static define(){
+            return `What is an animal? animal(noun) an·​i·​mal  : ${this.definition}`
         }
     }
 
@@ -126,4 +131,7 @@
     // This makes sense because we want all the math methods to be organized in a way that they are all together, however, we don't want to instantiate a new class to use them.
 
     // We can then add the word static to declare methods and properties to a class
+
+
+
 
