@@ -2,35 +2,27 @@
     
      ********  MERGE SORT  **********
 
-    Merge sort is an efficient sorting algorithm. 
-    It works on the principle of Divide and Conquer. 
-    Merge sort repeatedly breaks down a list into several sublists 
-    until each sublist consists of a single element and merging 
-    those sublists in a manner that results into a sorted list.
-    Starts by comparing every two elements and swapping them 
-    if the first item is less than the second. 
-    It then merges each of the resulting lists of two into 
-    lists of four using the same comparison, then merges those lists of four, 
-    and so on; until at last two lists are merged 
-    into the final sorted list.
+    - Merge sort is an efficient sorting algorithm. 
+    - It works on the principle of Divide and Conquer. 
+    - Merge sort repeatedly breaks down a list into several sublists 
+      until each sublist consists of a single element and merging 
+      those sublists in a manner that results into a sorted list.
+    - Starts by comparing every two elements and swapping them if the first item is less than the second. 
+    - It then merges each of the resulting lists of two into 
+      lists of four using the same comparison, then merges those lists of four, and so on; until at last two lists are merged into the final sorted list.
 
-    Merge sort is a fast, stable sort,
-    meaning it will keep the elements in original order 
-    in the case of duplicate or equal values.
-    Time complexity: O(n(logn)) N time to reassemble and log(n) to split;
-    Space is O(n) - one of its weaknesses.
+    - Merge sort is a fast, stable sort, meaning it will keep the   elements in original order in the case of duplicate or equal values.
+
+    - Time complexity: O(n(logn)) N time to reassemble and log(n) to split;
+    - Space is O(n) - one of its weaknesses.
     Merge sort is great in multi-threaded languages like Java
-    as threads working side by side can sort the arrays while they are being
-    split at once.
+    as threads working side by side can sort the arrays while they are being split at once.
 
     DIVIDE AND CONQUER
 
       In CS, Divide and Conquer is a term used to describe a certain 
       paradigm for implementing algorithms.  Any algorithm that adheres
-      to a Divide and Conquer methodology functions by breaking a problem
-      down into a smaller version of the same problem.  This effect is 
-      repeated until a simple solution can be found.  The results are then 
-      recompiled to return a solution.
+      to a Divide and Conquer methodology functions by breaking a problem down into a smaller version of the same problem.  This effect is repeated until a simple solution can be found.  The results are then recompiled to return a solution.
 
 
 
@@ -96,7 +88,7 @@ const mergeSort = (arr) => {
     // if the length of the array is less than or equal to 1 then we know our array is already sorted so we can return our array
 
 
-  // REDUCTIVE CASE 
+  // REDUCTIVE CASE - an algorithm for transforming one problem into another simpler problem.
     const mid = Math.ceil(arr.length/2);
     // find mid point of array 
     const left = arr.splice(0, mid);
