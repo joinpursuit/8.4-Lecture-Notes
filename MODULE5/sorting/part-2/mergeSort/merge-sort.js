@@ -62,42 +62,71 @@ const testArr = [4, 8, 7, 2, 11, 1, 3];
 
 //  Step one, lets build our CONQUER step for use later
 //  once we have a DIVIDE step
-const left = [4, 8, 1];
-const right = [3, 6];
+const leftTest = [1, 4, 8];
+const rightTest = [3, 6];
+
+// [1, 3, 4, 6, 8]
 
 const merge = (left, right) => {
+  // left -> [  8]
+  // right -> []
+
   // where to begin?
-  let sorted = [];
-  while (left.length &&  right.length) {
-    if (left[0] < right[0]) {
-      sorted.push(left.shift());
-    } else {
-      sorted.push(right.shift());
-    }
-  }
-  return [...sorted, ...left, ...right];
+  let sortedArray = [] // [1, 3, 4, 6]
+  // create a new array
+
+    while (left.length && right.length){ // true
+      //create a loop that will run while we have elements in both our right and left arrays by checking the truthiness of the length
+      if (left[0] < right[0]){
+        // create a condition that looks at the first element of the left array
+          sortedArray.push(left.shift())
+        // if the value is smaller we want to push it into our array
+      }else {
+          sortedArray.push(right.shift())
+          // else we want to push the right side into our new array
+        }
+      }
+
+    return [...sortedArray, ...left, ...right]
+  // return a new array with the values of our sorted array spread, followed by any remaining value that might be in the left or right array
 };
+  // console.log(leftTest, rightTest, merge(leftTest, rightTest))
+
 
 // Step TWO DIVIDE
 // now that we have a conquer function that merges
 //
+const simpleArray = [9, 1, 5]
+// [9, 1] -> [9] [1]
+// [5]
+
+
 
 const mergeSort = (arr) => {
   //  now what?
   // BASE CASE 
+    if (arr.length <= 1){
+      return arr
+    }
     // if the length of the array is less than or equal to 1 then we know our array is already sorted so we can return our array
 
 
   // REDUCTIVE CASE - an algorithm for transforming one problem into another simpler problem.
-    const mid = Math.ceil(arr.length/2);
-    // find mid point of array 
-    const left = arr.splice(0, mid);
-    const right = arr;
+      const mid = Math.ceil(arr.length/2) // 1.5-> 2
+    // find mid point of array by calling Math.ceil on half of the input array's length - remember find the median!
+      let left = arr.splice(0, mid) // [9, 1]
+    // create a variable to hold the value of the first half of the array that we will get by splicing up to our mid point
+      let right = arr // [5]
+    // create a variable to hold the value of the remainer of the array
+
+
+    return merge(mergeSort(left), mergeSort(right))
 
     // return the result of our merge function called on the result of our mergeSort function called on the left and right of our array
 };
 
 // console.log(mergeSort(testArr));
+// console.log(mergeSort(simpleArray));
 
 
 
@@ -159,7 +188,7 @@ const cardSort = (arr) => {
   })
 }
 
-console.log(cardSort(cards));
+// console.log(cardSort(cards));
 
 
 

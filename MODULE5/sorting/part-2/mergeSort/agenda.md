@@ -6,8 +6,6 @@
 		4. Build it out!
 			- Conquer
 			- Divide 
-	## Array.prototype.sort()
-		1. .sort() Under the Hood
-		2. Working with Objects
+
 
  
