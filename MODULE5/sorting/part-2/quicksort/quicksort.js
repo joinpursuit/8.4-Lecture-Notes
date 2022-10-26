@@ -6,13 +6,12 @@ function quickSort(array) {
     if(array.length <= 1) return array
   // create recursive base case that will bubble up
   //  once we have a sorted array
-    // [2, 3, 4, 5, 6, 7, 8, 9]
+
   // PARTITION STEP
   // choose a pivot element
 //   let pivot = array.shift(); 
   let idx = Math.floor(Math.random() * array.length);
   let pivot = array[idx];
-  console.log(pivot)
     array.splice(idx, 1); 
     // console.log(array)
 
@@ -39,12 +38,12 @@ function quickSort(array) {
 
 let people = [
     { name: "Gigi", title: "Instructor" },
-    { name: "AnJu", title: "Student" },
-    { name: "Durdona", title: "Student" },
+    { name: "Kalilah", title: "Student" },
+    { name: "Sam", title: "Student" },
     { name: "Tim", title: "Instructor" },
-    { name: "Obi", title: "Student" },
-    { name: "Mashu", title: "Engineer" },
-    { name: "Jeffrey", title: "Student" },
+    { name: "Jimmy", title: "Student" },
+    { name: "Mason", title: "Engineer" },
+    { name: "T.K.", title: "Student" },
   ];  
 
 let myCallback = (a, b) => a.name > b.name ? -1 : 1;
