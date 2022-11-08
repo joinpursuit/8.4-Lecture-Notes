@@ -12,6 +12,7 @@ function quickSort(array) {
 //   let pivot = array.shift(); 
   let idx = Math.floor(Math.random() * array.length);
   let pivot = array[idx];
+    console.log("pivot", pivot)
     array.splice(idx, 1); 
     // console.log(array)
 
@@ -69,4 +70,4 @@ function quickSortWithCallback(array, callback) {
     return [...leftSorted, pivot, ...rightSorted]; //[AnJu, durdona, gigi,jeffrey, mashu, obi, tim,]
 }
 
-console.log(quickSortWithCallback(people, myCallback));
+// console.log(quickSortWithCallback(people, myCallback));
