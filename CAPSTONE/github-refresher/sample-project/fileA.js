@@ -1,2 +1,1 @@
- const myVeryDescriptiveVariable = "something"
- const myOtherVeryDescriptiveVariable = "something-else"
+ const myChangedVeryDescriptiveVariable = "something"
