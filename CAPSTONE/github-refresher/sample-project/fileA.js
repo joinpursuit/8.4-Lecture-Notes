@@ -1,1 +1,2 @@
- const myChangedVeryDescriptiveVariable = "something"
+ const myChangedVeryDescriptiveVariable = "something- else"
+ const anotherVariable = "git-stuff"
